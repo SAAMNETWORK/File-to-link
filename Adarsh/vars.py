@@ -11,8 +11,8 @@ class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', '18312660'))
     API_HASH = str(getenv('API_HASH', 'b0697229f0da116e4ce97018ad6df3d0'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN', '5588536277:AAGOVFM9NsSo-CPY3-gz1L3dHMueSjf4TNQ'))
-    name = str(getenv('name', 'Directvideos_bot'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN', '7336799306:AAG2WqAjbvc20GKsaKtWgK7MnGArdn4Nyjc'))
+    name = str(getenv('name', 'Movies_0o0_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
     BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1002120685278'))
@@ -29,13 +29,13 @@ class Var(object):
     
     else:
         ON_HEROKU = False
-    FQDN = str(getenv('FQDN', 'BIND_ADRESS:PORT')) if not ON_HEROKU or getenv('FQDN', '') else APP_NAME+'.herokuapp.com'
+    FQDN = str(getenv('FQDN', 'http://saamnetwork.site/')) if not ON_HEROKU or getenv('FQDN', '') else APP_NAME+'.herokuapp.com'
     HAS_SSL=bool(getenv('HAS_SSL',False))
     if HAS_SSL:
         URL = "https://{}/".format(FQDN)
     else:
         URL = "http://{}/".format(FQDN)
-    DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://miniature:karishama786@cluster0.hpqm6tc.mongodb.net/?retryWrites=true&w=majority'))
+    DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://ahmedalisha43210:9poarDs1jIQMvqSb@surftg.txj49.mongodb.net/?retryWrites=true&w=majority&appName=SurfTG'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'SAAM_Network_2'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split()))     
     
